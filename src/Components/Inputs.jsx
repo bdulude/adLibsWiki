@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 
 const Inputs = (props) => {
@@ -7,23 +7,28 @@ const Inputs = (props) => {
     const [keys, setKeys] = useState([]);
     const [inputs, setInputs] = useState({});
 
+    // Set keys, redirect if there are none
     useEffect(() => {
-        setKeys(Object.keys(props.data));
-    }, [props.data]);
+        const newKeys = Object.keys(props.data);
+        if (newKeys.length === 0){
+            history.push('/');
+        }
+        setKeys(newKeys);
+    }, [props.data, history]);
 
+    // Dynamically bind any number of inputs
     const handleInput = (key, e) => {
         let inputsCopy = { ...inputs };
         inputsCopy[key] = e.target.value;
         setInputs(inputsCopy);
     };
 
+    // Puts all entries into data prop, changes view to output component
     const handleSubmit = () => {
         let dataCopy = { ...props.data };
         for (const key in inputs) {
-            console.log(key, inputs[key]);
             dataCopy[key][3] = inputs[key];
         }
-        // console.log(dataCopy);
         props.setData(dataCopy);
         history.push('/out');
     };
