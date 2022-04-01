@@ -17,7 +17,6 @@ const Output = (props) => {
     return (
         <div className="card">
             <div className="card-body">
-                {/* <h3>{JSON.stringify(props.articleInfo)}</h3> */}
                 <h3>{props.articleInfo["title"]}</h3>
                 <p>
                     {props.words.map((word, key) => {
@@ -32,7 +31,6 @@ const Output = (props) => {
                         );
                     })}
                 </p>
-                {/* <p>{props.articleInfo["summary"]}</p> */}
                 <a href={props.articleInfo.url}>{props.articleInfo.url}</a>
             </div>
         </div>

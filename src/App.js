@@ -16,6 +16,7 @@ function App() {
     const [johnMode, setJohnMode] = useState("");
     const history = useHistory();
 
+    // Gets the parts of speech for each word from the first definition that Free Dictionary API returns
     const getPartsOfSpeech = (obj) => {
         console.log("--------------- Getting Parts of Speech");
         let promises = [];
@@ -95,7 +96,7 @@ function App() {
             })
     }
 
-
+    // Gets the Wikipedia article summary by processing the URL
     const getArticle = () => {
         let updated = article;
         let split = article.split('/');
@@ -131,7 +132,6 @@ function App() {
     const toggleJohnMode = () => {
         johnMode.length > 1 ? setJohnMode("") : setJohnMode("johnMode");
     }
-
 
     return (
         <div className={`App text-center min-vh-100 ${johnMode}`}>
