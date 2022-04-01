@@ -173,13 +173,13 @@ function App() {
                             Built with <a href="https://reactjs.org/">React</a> and <a href="https://getbootstrap.com/">Bootstrap</a>.
                         </p>
                         <p>
-                            Uses the <a href="https://dictionaryapi.dev/">dictionaryapi.dev</a> API to grab parts of speech.
+                            Uses the <a href="https://dictionaryapi.dev/">Free Dictionary API</a> to grab parts of speech.
                         </p>
                         <p>
                             Uses <a href="https://www.mediawiki.org/wiki/Wikimedia_REST_API">Wikipedia's REST API</a> to get article summaries.
                         </p>
                         <p>
-                            Created by Brent Dulude over the course the last week in March 2022 for Coding Dojo.
+                            Created by Brent Dulude over the course of the last week of March 2022 for Coding Dojo.
                         </p>
                         <p>
                             Find me on <a href="https://github.com/bdulude">GitHub</a> or <a href="https://www.linkedin.com/in/bdulude/">LinkedIn</a>
